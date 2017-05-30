@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>guess number</title>
+		<link rel="stylesheet" href="">
+	</head>
+	<body>
+		<script type="text/javascript">
+			var guess=0;
+			var condition= false;
+			function randomnumber(){ return Math.floor(Math.random()*6)+1;}
+			function evaluatecheck(con){
+				if(con==true){
+					return true;
+				}
+					return false;
+				
+			}
+			var randomnumb = randomnumber();
+			do{
+			var temp=prompt('guess the number?[1-6]');
+			guess+=1;
+			alert('number guessed = '+temp +'random ='+randomnumb);
+			
+			if(temp == randomnumb){
+				document.write('total guess = '+guess);
+				console.log(temp +' ==== '+randomnumb)
+				condition = true;
+			}
+			check=evaluatecheck(condition);
+			}while(!check)
+		</script>
+	</body>
+</html>
